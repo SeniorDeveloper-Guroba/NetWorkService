@@ -13,11 +13,6 @@ final public class Texts {
         case empty        = ""
         case error        = "ОШИБКА"
         case noNetwork    = "НЕТ ИНТЕРНЕТА"
-        case save         = "Сохранен"
-        case registration = "Регистрация"
-        case information  = "Информация"
-        case install      = "Установить"
-        case delete       = "Удалить"
         
         private func localizedString() -> String {
             return NSLocalizedString(self.rawValue, comment: "")
@@ -27,10 +22,10 @@ final public class Texts {
             return title!.localizedString()
         }
     }
+    
     public enum Message: String, CaseIterable {
         
         case empty     = ""
-        case delete    = "Хотите удалить?"
         case noNetwork = "Отсутствует подключение к сети, подключите Ваше устройство и попробуйте снова"
         case noJSON    = "Извините произошла ошибка получения данных"
         
@@ -42,10 +37,12 @@ final public class Texts {
             return message!.localizedString()
         }
     }
+    
     public enum MessageCustom {
         case message(String)
     }
-    public enum Worning {
+    
+    public enum Warning {
         case non
     }
     

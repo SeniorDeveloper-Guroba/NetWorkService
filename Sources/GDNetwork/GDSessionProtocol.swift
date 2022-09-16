@@ -7,12 +7,12 @@
 import Combine
 import Foundation
 
-public protocol GDURLSession {
+public protocol GDSessionProtocol {
     
     func session(url: URL?, body: Data?, httpMethod: String.HTTPMethod, header: Header?, completion: @escaping ClosureSession)
 }
 
-public extension GDURLSession {
+public extension GDSessionProtocol {
     
     func session(url: URL?, body: Data? = nil, httpMethod: String.HTTPMethod, header: Header? = nil, completion: @escaping ClosureSession){
         guard let url = url else {
