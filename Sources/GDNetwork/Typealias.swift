@@ -23,8 +23,9 @@ public typealias ClosureTwo<T, G> = ((T, G) -> Void)
 public typealias ClosureAny       = ((Any?) -> Void)
 
 //MARK: - CUSTOM TYPE
-public typealias Header    = [String: String]
-public typealias ReturnURL = (string: String?, URL: URL?)
+public typealias Header     = [String: String]
+public typealias HTTPMethod = String.HTTPMethod
+public typealias ReturnURL  = (string: String?, URL: URL?)
 
 //Result session
 public enum SessionResult {
