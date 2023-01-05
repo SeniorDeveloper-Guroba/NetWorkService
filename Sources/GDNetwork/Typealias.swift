@@ -24,7 +24,7 @@ public typealias ClosureAny       = ((Any?) -> Void)
 
 //MARK: - CUSTOM TYPE
 public typealias Header     = [String: String]
-public typealias HTTPMethod = String.HTTPMethod
+public typealias HTTPMethod = String.HTTPMethods
 public typealias ReturnURL  = (string: String?, URL: URL?)
 
 //Result session

@@ -13,7 +13,7 @@ public protocol GDRequestProtocol: AnyObject, GDSessionProtocol {
 
 public extension GDRequestProtocol {
     
-    func request<T:GDRequestData>(requestData: T, completionRequest: @escaping Closure<RequestResult>) {
+    func request<T: GDRequestData>(requestData: T, completionRequest: @escaping Closure<RequestResult>) {
         let internetСheck  = InternetСheckService()
         let decoderService = JSONDecoderService()
         let groupSession   = DispatchGroup()

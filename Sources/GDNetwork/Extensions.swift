@@ -10,7 +10,7 @@ import Foundation
 //MARK: - Others
 extension String {
     
-    public enum HTTPMethod : String {
+    public enum HTTPMethods : String {
         case post  = "POST"
         case get   = "GET"
         case patch = "PATCH"

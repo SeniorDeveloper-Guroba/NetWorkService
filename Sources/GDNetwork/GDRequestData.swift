@@ -13,5 +13,5 @@ public protocol GDRequestData {
     var url        : URL { get }
     var body       : Data?  { get }
     var header     : Header { get }
-    var httpMethod : String.HTTPMethod { get }
+    var httpMethod : HTTPMethod { get }
 }
