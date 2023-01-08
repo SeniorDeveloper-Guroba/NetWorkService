@@ -44,17 +44,22 @@ public extension GDRequestProtocol {
         }
         //4 - Decoding
         groupSession.notify(queue: .main) {
-            decoderService.decode(jsonType: T.ReturnDecodable.self, data: sessionData) { (decodeResult) in
-                switch decodeResult {
-                        // Error
-                    case .error(let error):
-                        completionRequest(.error(error))
-                        // Success
-                    case .json(let object):
-                        if let object = object as? T.ReturnDecodable {
-                            completionRequest(.object(object))
+            switch requestData.returnType {
+                case .data:
+                    completionRequest(.object(sessionData!))
+                case .json:
+                    decoderService.decode(jsonType: T.ReturnDecodable.self, data: sessionData) { (decodeResult) in
+                        switch decodeResult {
+                                // Error
+                            case .error(let error):
+                                completionRequest(.error(error))
+                                // Success
+                            case .json(let object):
+                                if let object = object as? T.ReturnDecodable {
+                                    completionRequest(.object(object))
+                                }
                         }
-                }
+                    }
             }
         }
     }

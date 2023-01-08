@@ -15,4 +15,10 @@ public protocol GDRequestData {
     var parameters : [String: String]? { get }
     var header     : Header            { get }
     var httpMethod : HTTPMethod        { get }
+    var returnType  : ReturnType       { get }
+}
+
+public enum ReturnType {
+    case json
+    case data
 }
