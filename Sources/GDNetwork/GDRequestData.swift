@@ -10,8 +10,9 @@ public protocol GDRequestData {
     
     associatedtype ReturnDecodable: Decodable
     
-    var url        : URL { get }
-    var body       : Data?  { get }
-    var header     : Header { get }
-    var httpMethod : HTTPMethod { get }
+    var url        : URL               { get }
+    var body       : Data?             { get }
+    var parameters : [String: String]? { get }
+    var header     : Header            { get }
+    var httpMethod : HTTPMethod        { get }
 }

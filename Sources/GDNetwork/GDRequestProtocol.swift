@@ -22,7 +22,7 @@ public extension GDRequestProtocol {
         guard internetСheck.check() else { return }
         //2 - Creating URL, Header, Body, Parameters
         let body       = requestData.body
-        let url        = requestData.url
+        let url        = requestData.url.create(dictionary: requestData.parameters)
         let header     = requestData.header
         let httpMethod = requestData.httpMethod
         //3 - Geting data
@@ -59,4 +59,5 @@ public extension GDRequestProtocol {
         }
     }
 }
+
 

@@ -18,3 +18,26 @@ extension String {
     }
 }
 
+extension Dictionary where Iterator.Element == (key: String, value: String) {
+    
+    func createQueryItems() -> [URLQueryItem] {
+        let result = self.map { URLQueryItem(name: $0, value: $1) }
+        return result
+    }
+}
+
+extension URL {
+    
+    public func create(dictionary: [String: String]?) -> URL? {
+        var components = URLComponents()
+        components.scheme     = self.scheme
+        components.host       = self.host
+        components.path       = self.path
+        components.queryItems = dictionary?.createQueryItems()
+        guard let url = components.url else {
+            fatalError("Error URL no url")
+        }
+        return url
+    }
+
+}
