@@ -11,11 +11,11 @@ public protocol GDRequestData {
     associatedtype ReturnDecodable: Decodable
     
     var url        : URL               { get }
-    var body       : Data?             { get }
-    var parameters : [String: String]? { get }
+    var body       : Data?             { get set }
+    var parameters : [String: String]? { get set }
     var header     : Header            { get }
     var httpMethod : HTTPMethod        { get }
-    var returnType  : ReturnType       { get }
+    var returnType : ReturnType        { get }
 }
 
 public enum ReturnType {
