@@ -1,7 +1,7 @@
 
 import Foundation
 
-public protocol RequestProtocol: AnyObject, GDSessionProtocol {
+public protocol RequestProtocol: AnyObject, SessionProtocol {
     
    
 }
