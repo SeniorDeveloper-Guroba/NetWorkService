@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "alertservice",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SeniorDeveloper-Guroba/AlertService",
+      "state" : {
+        "branch" : "master",
+        "revision" : "a8cbdec5fbfedb0a04386f058c9116a55ec499cf"
+      }
+    },
+    {
       "identity" : "reachability.swift",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ashleymills/Reachability.swift",
