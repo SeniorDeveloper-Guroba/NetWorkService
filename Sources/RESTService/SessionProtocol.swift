@@ -1,18 +1,13 @@
-//
-//  SessionProtocol.swift
-//  
-//
-//  Created by Senior Developer on 15.09.2022.
-//
+
 import Combine
 import Foundation
 
-public protocol GDSessionProtocol {
+public protocol SessionProtocol {
     
     func session(url: URL?, body: Data?, httpMethod: HTTPMethod, header: Header?, completion: @escaping ClosureSession)
 }
 
-public extension GDSessionProtocol {
+public extension SessionProtocol {
     
     func session(url: URL?, body: Data? = nil, httpMethod: HTTPMethod, header: Header? = nil, completion: @escaping ClosureSession){
         guard let url = url else {

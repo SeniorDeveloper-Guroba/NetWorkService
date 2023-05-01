@@ -1,19 +1,14 @@
-//
-//  GDRequestProtocol.swift
-//  
-//
-//  Created by Senior Developer on 15.09.2022.
-//
+
 import Foundation
 
-public protocol GDRequestProtocol: AnyObject, GDSessionProtocol {
+public protocol RequestProtocol: AnyObject, GDSessionProtocol {
     
    
 }
 
-public extension GDRequestProtocol {
+public extension RequestProtocol {
     
-    func request<T: GDRequestData>(requestData: T, completionRequest: @escaping Closure<RequestResult>) {
+    func request<T: RequestData>(requestData: T, completionRequest: @escaping Closure<RequestResult>) {
         let internetСheck  = InternetСheckService()
         let decoderService = JSONDecoderService()
         let groupSession   = DispatchGroup()

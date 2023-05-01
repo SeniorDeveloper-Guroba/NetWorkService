@@ -1,12 +1,7 @@
-//
-//  GDRequestData.swift
-//  
-//
-//  Created by Senior Developer on 16.09.2022.
-//
+
 import Foundation
 
-public protocol GDRequestData {
+public protocol RequestData {
     
     associatedtype ReturnDecodable: Decodable
     
